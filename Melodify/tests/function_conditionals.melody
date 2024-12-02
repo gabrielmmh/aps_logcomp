@@ -1,0 +1,15 @@
+set tempo 120;
+set instrument "harp";
+
+function playSequence() {
+    if (tempo > 100) {
+        play C4 quarter;
+        play E4 quarter;
+    } else {
+        play G4 half;
+    }
+}
+
+repeat 3 {
+    playSequence();
+}

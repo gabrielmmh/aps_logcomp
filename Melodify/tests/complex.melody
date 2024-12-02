@@ -1,0 +1,29 @@
+set tempo 140;
+set instrument "organ";
+set volume 70;
+
+function playMelody() {
+    repeat 2 {
+        play C4 eighth;
+        play D4 eighth;
+        play E4 quarter;
+    }
+}
+
+function playBass() {
+    play C2 half;
+    play G2 half;
+}
+
+if (tempo > 120) {
+    playMelody();
+} else {
+    playBass();
+}
+
+set volume 50;
+
+repeat 3 {
+    play chord C_major quarter;
+    play chord G_major quarter;
+}

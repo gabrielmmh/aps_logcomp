@@ -1,0 +1,9 @@
+set tempo 100;
+set instrument "drums";
+
+if (tempo > 90) {
+    play C4 quarter;
+    play D4 quarter;
+} else {
+    play G4 half;
+}

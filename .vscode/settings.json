@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "bitwriter.h": "c",
+        "targetmachine.h": "c",
+        "executionengine.h": "c",
+        "target.h": "c"
+    }
+}

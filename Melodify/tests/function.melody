@@ -1,0 +1,11 @@
+set tempo 120;
+set instrument "guitar";
+
+function playChord() {
+    play chord C_major quarter;
+    play chord E_minor quarter;
+    play chord G_major half;
+}
+
+playChord();
+playChord();

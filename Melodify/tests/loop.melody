@@ -1,0 +1,9 @@
+set tempo 120;
+set instrument "piano";
+
+repeat 4 {
+    play C4 quarter;
+    play E4 quarter;
+    play G4 quarter;
+    play C5 quarter;
+}

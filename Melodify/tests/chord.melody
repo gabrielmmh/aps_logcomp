@@ -1,0 +1,6 @@
+set tempo 80;
+set instrument "violin";
+
+play chord C_major quarter;
+play chord G_major half;
+play chord F_major whole;

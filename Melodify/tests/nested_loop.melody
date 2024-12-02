@@ -1,0 +1,13 @@
+set tempo 120;
+set instrument "flute";
+
+repeat 2 {
+    play C4 quarter;
+
+    repeat 3 {
+        play E4 eighth;
+        play G4 eighth;
+    }
+
+    play F4 half;
+}
