@@ -1,9 +1,0 @@
-set tempo (120);
-set var 200;
-
-if (var > 100) {
-    play C4 quarter;
-    play
-} else {
-    play G4 quarter;
-}
