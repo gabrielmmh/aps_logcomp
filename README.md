@@ -1,8 +1,8 @@
-A EBNF definida é bastante abrangente e se alinha bem com o objetivo da linguagem musical. Agora, vamos trabalhar na **documentação detalhada para o README do repositório** com base nessa EBNF.
 
----
+## **APS Lógica da Computação - Linguagem Musical**
+### Arthur Tamm e Gabriel Hermida
 
-## **README - Linguagem Musical**
+[Link para o vídeo no youtube](https://youtu.be/jyssd9LXVo0)
 
 ### **Nome da Linguagem**
 **Melodify** - Uma linguagem de programação projetada para compor música de forma simples e intuitiva.
@@ -277,6 +277,24 @@ if (tempo > 100) {
 ---
 
 ### **Passo a Passo do Projeto**
+
+1. **Dependências Necessárias**:
+    - Flex e Bison para o tratamento léxico e sintático.
+    ```bash
+    sudo apt install flex bison
+    ```
+    - Dependências python:
+    ```bash
+    pip install pyyaml mido pygame
+    ```
+    - Instalar java:
+    ```bash
+    sudo apt install deafult-jdk
+    ```
+    - Instalar Timidity para tocar o arquivo MIDI:
+    ```bash
+    sudo apt install timidity
+    ```
 1. **Tratamento Léxico e Sintático**:
    - O tratamento léxico e sintático é realizado pelos arquivos `lexer.l` e `parser.y`, que utilizam Flex e Bison, respectivamente.
    - Esses arquivos, junto com outros componentes do projeto, são compilados com o `Makefile`:
