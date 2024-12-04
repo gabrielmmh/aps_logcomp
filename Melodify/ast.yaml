@@ -1,0 +1,515 @@
+type: 0
+left:
+  type: 1
+  left:
+    type: 24
+    left:
+      type: 18
+      value: 120
+  next:
+    type: 1
+    left:
+      type: 25
+      left:
+        type: 19
+        value: "brass"
+    next:
+      type: 1
+      left:
+        type: 27
+        left:
+          type: 20
+          value: D#5
+        right:
+          type: 22
+          value: eighth
+      next:
+        type: 1
+        left:
+          type: 27
+          left:
+            type: 20
+            value: F#5
+          right:
+            type: 22
+            value: eighth
+        next:
+          type: 1
+          left:
+            type: 27
+            left:
+              type: 20
+              value: G#5
+            right:
+              type: 22
+              value: eighth
+          next:
+            type: 1
+            left:
+              type: 27
+              left:
+                type: 20
+                value: F#5
+              right:
+                type: 22
+                value: eighth
+            next:
+              type: 1
+              left:
+                type: 27
+                left:
+                  type: 20
+                  value: D#5
+                right:
+                  type: 22
+                  value: quarter
+              next:
+                type: 1
+                left:
+                  type: 27
+                  left:
+                    type: 20
+                    value: E5
+                  right:
+                    type: 22
+                    value: eighth
+                next:
+                  type: 1
+                  left:
+                    type: 27
+                    left:
+                      type: 20
+                      value: F#5
+                    right:
+                      type: 22
+                      value: eighth
+                  next:
+                    type: 1
+                    left:
+                      type: 27
+                      left:
+                        type: 20
+                        value: G#5
+                      right:
+                        type: 22
+                        value: eighth
+                    next:
+                      type: 1
+                      left:
+                        type: 27
+                        left:
+                          type: 20
+                          value: B5
+                        right:
+                          type: 22
+                          value: eighth
+                      next:
+                        type: 1
+                        left:
+                          type: 27
+                          left:
+                            type: 20
+                            value: G#5
+                          right:
+                            type: 22
+                            value: quarter
+                        next:
+                          type: 1
+                          left:
+                            type: 27
+                            left:
+                              type: 20
+                              value: C#5
+                            right:
+                              type: 22
+                              value: eighth
+                          next:
+                            type: 1
+                            left:
+                              type: 27
+                              left:
+                                type: 20
+                                value: E5
+                              right:
+                                type: 22
+                                value: eighth
+                            next:
+                              type: 1
+                              left:
+                                type: 27
+                                left:
+                                  type: 20
+                                  value: F#5
+                                right:
+                                  type: 22
+                                  value: eighth
+                              next:
+                                type: 1
+                                left:
+                                  type: 27
+                                  left:
+                                    type: 20
+                                    value: A5
+                                  right:
+                                    type: 22
+                                    value: eighth
+                                next:
+                                  type: 1
+                                  left:
+                                    type: 27
+                                    left:
+                                      type: 20
+                                      value: F#5
+                                    right:
+                                      type: 22
+                                      value: quarter
+                                  next:
+                                    type: 1
+                                    left:
+                                      type: 27
+                                      left:
+                                        type: 20
+                                        value: G#5
+                                      right:
+                                        type: 22
+                                        value: eighth
+                                    next:
+                                      type: 1
+                                      left:
+                                        type: 27
+                                        left:
+                                          type: 20
+                                          value: F#5
+                                        right:
+                                          type: 22
+                                          value: eighth
+                                      next:
+                                        type: 1
+                                        left:
+                                          type: 27
+                                          left:
+                                            type: 20
+                                            value: G#5
+                                          right:
+                                            type: 22
+                                            value: eighth
+                                        next:
+                                          type: 1
+                                          left:
+                                            type: 27
+                                            left:
+                                              type: 20
+                                              value: E5
+                                            right:
+                                              type: 22
+                                              value: eighth
+                                          next:
+                                            type: 1
+                                            left:
+                                              type: 27
+                                              left:
+                                                type: 20
+                                                value: F#5
+                                              right:
+                                                type: 22
+                                                value: eighth
+                                            next:
+                                              type: 1
+                                              left:
+                                                type: 27
+                                                left:
+                                                  type: 20
+                                                  value: G#5
+                                                right:
+                                                  type: 22
+                                                  value: eighth
+                                              next:
+                                                type: 1
+                                                left:
+                                                  type: 27
+                                                  left:
+                                                    type: 20
+                                                    value: F#5
+                                                  right:
+                                                    type: 22
+                                                    value: eighth
+                                                next:
+                                                  type: 1
+                                                  left:
+                                                    type: 27
+                                                    left:
+                                                      type: 20
+                                                      value: E5
+                                                    right:
+                                                      type: 22
+                                                      value: eighth
+                                                  next:
+                                                    type: 1
+                                                    left:
+                                                      type: 27
+                                                      left:
+                                                        type: 20
+                                                        value: F#5
+                                                      right:
+                                                        type: 22
+                                                        value: eighth
+                                                    next:
+                                                      type: 1
+                                                      left:
+                                                        type: 27
+                                                        left:
+                                                          type: 20
+                                                          value: D#5
+                                                        right:
+                                                          type: 22
+                                                          value: eighth
+                                                      next:
+                                                        type: 1
+                                                        left:
+                                                          type: 27
+                                                          left:
+                                                            type: 20
+                                                            value: E5
+                                                          right:
+                                                            type: 22
+                                                            value: quarter
+                                                        next:
+                                                          type: 1
+                                                          left:
+                                                            type: 27
+                                                            left:
+                                                              type: 20
+                                                              value: G#5
+                                                            right:
+                                                              type: 22
+                                                              value: eighth
+                                                          next:
+                                                            type: 1
+                                                            left:
+                                                              type: 27
+                                                              left:
+                                                                type: 20
+                                                                value: F#5
+                                                              right:
+                                                                type: 22
+                                                                value: eighth
+                                                            next:
+                                                              type: 1
+                                                              left:
+                                                                type: 27
+                                                                left:
+                                                                  type: 20
+                                                                  value: E5
+                                                                right:
+                                                                  type: 22
+                                                                  value: eighth
+                                                              next:
+                                                                type: 1
+                                                                left:
+                                                                  type: 27
+                                                                  left:
+                                                                    type: 20
+                                                                    value: C#5
+                                                                  right:
+                                                                    type: 22
+                                                                    value: eighth
+                                                                next:
+                                                                  type: 1
+                                                                  left:
+                                                                    type: 27
+                                                                    left:
+                                                                      type: 20
+                                                                      value: D#5
+                                                                    right:
+                                                                      type: 22
+                                                                      value: eighth
+                                                                  next:
+                                                                    type: 1
+                                                                    left:
+                                                                      type: 27
+                                                                      left:
+                                                                        type: 20
+                                                                        value: E5
+                                                                      right:
+                                                                        type: 22
+                                                                        value: quarter
+                                                                    next:
+                                                                      type: 1
+                                                                      left:
+                                                                        type: 27
+                                                                        left:
+                                                                          type: 20
+                                                                          value: A5
+                                                                        right:
+                                                                          type: 22
+                                                                          value: eighth
+                                                                      next:
+                                                                        type: 1
+                                                                        left:
+                                                                          type: 27
+                                                                          left:
+                                                                            type: 20
+                                                                            value: G#5
+                                                                          right:
+                                                                            type: 22
+                                                                            value: eighth
+                                                                        next:
+                                                                          type: 1
+                                                                          left:
+                                                                            type: 27
+                                                                            left:
+                                                                              type: 20
+                                                                              value: F#5
+                                                                            right:
+                                                                              type: 22
+                                                                              value: eighth
+                                                                          next:
+                                                                            type: 1
+                                                                            left:
+                                                                              type: 27
+                                                                              left:
+                                                                                type: 20
+                                                                                value: D#5
+                                                                              right:
+                                                                                type: 22
+                                                                                value: eighth
+                                                                            next:
+                                                                              type: 1
+                                                                              left:
+                                                                                type: 27
+                                                                                left:
+                                                                                  type: 20
+                                                                                  value: E5
+                                                                                right:
+                                                                                  type: 22
+                                                                                  value: eighth
+                                                                              next:
+                                                                                type: 1
+                                                                                left:
+                                                                                  type: 27
+                                                                                  left:
+                                                                                    type: 20
+                                                                                    value: F#5
+                                                                                  right:
+                                                                                    type: 22
+                                                                                    value: quarter
+                                                                                next:
+                                                                                  type: 1
+                                                                                  left:
+                                                                                    type: 27
+                                                                                    left:
+                                                                                      type: 20
+                                                                                      value: F#5
+                                                                                    right:
+                                                                                      type: 22
+                                                                                      value: quarter
+                                                                                  next:
+                                                                                    type: 1
+                                                                                    left:
+                                                                                      type: 27
+                                                                                      left:
+                                                                                        type: 20
+                                                                                        value: G#5
+                                                                                      right:
+                                                                                        type: 22
+                                                                                        value: quarter
+                                                                                    next:
+                                                                                      type: 1
+                                                                                      left:
+                                                                                        type: 27
+                                                                                        left:
+                                                                                          type: 20
+                                                                                          value: B5
+                                                                                        right:
+                                                                                          type: 22
+                                                                                          value: half
+                                                                                      next:
+                                                                                        type: 1
+                                                                                        left:
+                                                                                          type: 27
+                                                                                          left:
+                                                                                            type: 20
+                                                                                            value: E5
+                                                                                          right:
+                                                                                            type: 22
+                                                                                            value: quarter
+                                                                                        next:
+                                                                                          type: 1
+                                                                                          left:
+                                                                                            type: 27
+                                                                                            left:
+                                                                                              type: 20
+                                                                                              value: F#5
+                                                                                            right:
+                                                                                              type: 22
+                                                                                              value: quarter
+                                                                                          next:
+                                                                                            type: 1
+                                                                                            left:
+                                                                                              type: 27
+                                                                                              left:
+                                                                                                type: 20
+                                                                                                value: G#5
+                                                                                              right:
+                                                                                                type: 22
+                                                                                                value: half
+                                                                                            next:
+                                                                                              type: 1
+                                                                                              left:
+                                                                                                type: 27
+                                                                                                left:
+                                                                                                  type: 20
+                                                                                                  value: C#5
+                                                                                                right:
+                                                                                                  type: 22
+                                                                                                  value: quarter
+                                                                                              next:
+                                                                                                type: 1
+                                                                                                left:
+                                                                                                  type: 27
+                                                                                                  left:
+                                                                                                    type: 20
+                                                                                                    value: E5
+                                                                                                  right:
+                                                                                                    type: 22
+                                                                                                    value: quarter
+                                                                                                next:
+                                                                                                  type: 1
+                                                                                                  left:
+                                                                                                    type: 27
+                                                                                                    left:
+                                                                                                      type: 20
+                                                                                                      value: F#5
+                                                                                                    right:
+                                                                                                      type: 22
+                                                                                                      value: half
+                                                                                                  next:
+                                                                                                    type: 1
+                                                                                                    left:
+                                                                                                      type: 27
+                                                                                                      left:
+                                                                                                        type: 20
+                                                                                                        value: F#5
+                                                                                                      right:
+                                                                                                        type: 22
+                                                                                                        value: quarter
+                                                                                                    next:
+                                                                                                      type: 1
+                                                                                                      left:
+                                                                                                        type: 27
+                                                                                                        left:
+                                                                                                          type: 20
+                                                                                                          value: E5
+                                                                                                        right:
+                                                                                                          type: 22
+                                                                                                          value: quarter
+                                                                                                      next:
+                                                                                                        type: 1
+                                                                                                        left:
+                                                                                                          type: 27
+                                                                                                          left:
+                                                                                                            type: 20
+                                                                                                            value: D5
+                                                                                                          right:
+                                                                                                            type: 22
+                                                                                                            value: half

@@ -1,0 +1,15 @@
+type: 0
+left:
+  type: 1
+  left:
+    type: 24
+    left:
+      type: 18
+      value: 120
+  next:
+    type: 1
+    left:
+      type: 25
+      left:
+        type: 19
+        value: "piano"

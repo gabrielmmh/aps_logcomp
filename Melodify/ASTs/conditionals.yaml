@@ -1,0 +1,58 @@
+type: 0
+left:
+  type: 1
+  left:
+    type: 24
+    left:
+      type: 18
+      value: 100
+  next:
+    type: 1
+    left:
+      type: 25
+      left:
+        type: 19
+        value: "organ"
+    next:
+      type: 1
+      left:
+        type: 6
+        left:
+          type: 16
+          operator: '>'
+          left:
+            type: 17
+            value: tempo
+          right:
+            type: 18
+            value: 90
+        if_block:
+          type: 1
+          left:
+            type: 27
+            left:
+              type: 20
+              value: C4
+            right:
+              type: 22
+              value: quarter
+          next:
+            type: 1
+            left:
+              type: 27
+              left:
+                type: 20
+                value: D4
+              right:
+                type: 22
+                value: quarter
+        else_block:
+          type: 1
+          left:
+            type: 27
+            left:
+              type: 20
+              value: G4
+            right:
+              type: 22
+              value: half

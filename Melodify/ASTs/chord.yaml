@@ -1,0 +1,45 @@
+type: 0
+left:
+  type: 1
+  left:
+    type: 24
+    left:
+      type: 18
+      value: 80
+  next:
+    type: 1
+    left:
+      type: 25
+      left:
+        type: 19
+        value: "violin"
+    next:
+      type: 1
+      left:
+        type: 28
+        left:
+          type: 21
+          value: C_major
+        right:
+          type: 22
+          value: quarter
+      next:
+        type: 1
+        left:
+          type: 28
+          left:
+            type: 21
+            value: G_major
+          right:
+            type: 22
+            value: half
+        next:
+          type: 1
+          left:
+            type: 28
+            left:
+              type: 21
+              value: F_major
+            right:
+              type: 22
+              value: whole

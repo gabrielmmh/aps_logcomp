@@ -25,9 +25,11 @@ A música é uma linguagem universal. No entanto, a composição musical pode se
 
 ### **Gramática Formal (EBNF)**
 ```ebnf
-program = { statement };
+program = statement_list ;
 
-statement = 
+statement_list = { statement } ;
+
+statement =
       variable_declaration
     | assignment
     | musical_instruction
@@ -35,132 +37,290 @@ statement =
     | loop
     | function_declaration
     | function_call
-    | "return", expression, ";";
+    ;
 
-variable_declaration = ("set", identifier, "to", expression, ";");
-assignment = identifier, "=", expression, ";";
+variable_declaration =
+      'set' IDENTIFIER [ '=' ] ( expression | STRING ) ';' ;
 
-musical_instruction = 
-      ("play", note, duration, ";")
-    | ("play", "chord", chord, duration, ";")
-    | ("set", "instrument", string, ";")
-    | ("set", "volume", expression, ";")
-    | ("set", "tempo", expression, ";");
+assignment =
+      IDENTIFIER '=' expression ';' ;
 
-conditional = "if", "(", condition, ")", "{", { statement }, "}", ["else", "{", { statement }, "}"];
+musical_instruction =
+      play_note
+    | play_chord
+    | set_musical_property ;
 
-loop = "repeat", integer, "{", { statement }, "}";
+play_note = 'play' NOTE DURATION ';' ;
 
-function_declaration = "function", identifier, "(", [parameters], ")", "{", { statement }, "}";
-function_call = identifier, "(", [arguments], ");";
+play_chord = 'play' 'chord' CHORD_NAME DURATION ';' ;
 
-parameters = parameter, { ",", parameter };
-parameter = type, identifier;
+set_musical_property =
+      'set' musical_property ';' ;
 
-arguments = expression, { ",", expression };
+musical_property =
+      'tempo' expression
+    | 'instrument' STRING
+    | 'volume' expression ;
 
-condition = expression, comparator, expression, { logical_operator, condition };
-comparator = ">", "<", ">=", "<=", "==", "!=";
-logical_operator = "&&", "||";
+conditional =
+      'if' '(' condition ')' '{' statement_list '}' [ 'else' '{' statement_list '}' ] ;
 
-expression = term, { ("+" | "-"), term };
-term = factor, { ("*" | "/"), factor };
-factor = 
-      integer 
-    | string 
-    | identifier 
-    | function_call 
-    | "(", expression, ")";
+loop =
+      'repeat' NUM '{' statement_list '}' ;
 
-note = string;  (* Example: "C4", "D#5" *)
-chord = string; (* Example: "C_major", "G7" *)
-duration = "whole" | "half" | "quarter" | "eighth";
-type = "int" | "str";
+function_declaration =
+      'function' IDENTIFIER '(' ')' '{' statement_list '}' ;
 
-integer = digit, { digit };
-digit = "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9";
+function_call =
+      IDENTIFIER '(' ')' ';' ;
 
-string = '"', { character }, '"';
-character = ? any valid ASCII character except '"' ?;
+condition =
+      expression relational_operator expression
+    | condition logical_operator condition
+    ;
 
-identifier = letter, { letter | digit | "_" };
-letter = "a" | "b" | "c" | ... | "z" | "A" | "B" | ... | "Z";
+relational_operator = '<' | '>' | '==' | '!=' ;
+
+logical_operator = '&&' | '||' ;
+
+expression =
+      expression '+' term
+    | expression '-' term
+    | term
+    ;
+
+term =
+      term '*' factor
+    | term '/' factor
+    | factor
+    ;
+
+factor =
+    | '-' factor
+    | NUM
+    | IDENTIFIER
+    | 'tempo'
+    | 'instrument'
+    | 'volume'
+    | NOTE
+    ;
+
+IDENTIFIER = /[a-zA-Z_][a-zA-Z0-9_]*/ ;
+NUM = /[0-9]+/ ;
+STRING = /"[^"]*"/ ; 
+
+NOTE = /C[0-9]|C#[0-9]|D[0-9]|D#[0-9]|E[0-9]|F[0-9]|F#[0-9]|G[0-9]|G#[0-9]|A[0-9]|A#[0-9]|B[0-9]/ ;
+
+CHORD_NAME = /[A-G](#)?_(major|minor|diminished)/ ;
+DURATION = 'whole' | 'half' | 'quarter' | 'eighth' ;
+
 ```
 
 ---
 
 ### **Exemplos de Código**
 
-#### **1. Composição Básica**
+#### **1. Definindo propriedades musicais**
 ```plaintext
-set tempo to 120;
+set tempo 120;
 set instrument "piano";
-
-play "C4" quarter;
-play "E4" quarter;
-play "G4" half;
+set volume 80;
 ```
 
-#### **2. Loop**
+#### **2. Intruções Musicais**
+
+As notas devem ser definidas com a oitava `(C4, D4, E4, F4, G4, A4, B4)` e a duração `(whole, half, quarter, eighth)`.
+
+Antes de tocar uma nota, é necessário usar o comando `play`.
+
+Os acordes são definidos com o nome do acorde `(C_major, D_minor, E_minor, F_major, G_major, A_minor, B_diminished)`.
+
+Antes de tocar um acorde, é necessário usar o comando `play chord`.
 ```plaintext
-repeat 3 {
-    play "C4" eighth;
-    play "E4" eighth;
-}
+play C4 quarter;
+play chord G_major half;
+play C4 quarter;
 ```
 
-#### **3. Condicional**
+#### **3. Declaração de Variável**
 ```plaintext
-set tempo to 120;
+set myNumber = 42;
+```
 
-if tempo > 100 {
-    play "C4" quarter;
+#### **4. Condicionais**
+```plaintext
+set tempo 120;
+
+if (tempo > 100) {
+    play C4 quarter;
 } else {
-    play "C4" half;
+    play G4 quarter;
 }
 ```
 
-#### **4. Função**
+#### **5. Loops**
 ```plaintext
-function play_scale(start_note, steps) {
-    repeat steps {
-        play start_note quarter;
-        set start_note to start_note + 1;
+repeat 4 {
+    play C4 quarter;
+}
+```
+
+#### **6. Loops Aninhados**
+```plaintext
+repeat 2 {
+    play C4 quarter;
+
+    repeat 3 {
+        play E4 eighth;
+        play G4 eighth;
     }
+
+    play F4 half;
+}
+```
+
+#### **7. Declaração e Chamada de Funções**
+```plaintext
+set tempo 120;
+set instrument "guitar";
+
+function playChord() {
+    play chord C_major quarter;
+    play chord E_minor quarter;
+    play chord G_major half;
 }
 
-play_scale("C4", 7);
+playChord();
+playChord();
 ```
+
+#### **8. Condições com Operadores Lógicos**
+```plaintext
+set tempo 120;
+set volume 80;
+
+if (tempo > 100 && volume < 90) {
+    play A4 half;
+    play C4 half;
+} else {
+    play B4 half;
+}
+```
+
+```plaintext
+set tempo 120;
+set volume 80;
+
+if (tempo > 100 || volume < 90) {
+    play A4 half;
+    play C4 half;
+} else {
+    play B4 half;
+}
+```
+
+#### **9. Operações Aritméticas**
+
+**Adição** 
+```plaintext
+set tempo 60 + 60;
+set instrument "flute";
+
+if (tempo > 100) {
+    play C4 quarter;
+    play E4 quarter;
+} else {
+    play G4 quarter;
+}
+```
+
+**Subtração** 
+```plaintext
+set tempo 120-10;
+set instrument "flute";
+
+if (tempo > 100) {
+    play C4 quarter;
+    play E4 quarter;
+} else {
+    play G4 quarter;
+}
+```
+
+**Multiplicação** 
+```plaintext
+set tempo 60*2;
+set instrument "flute";
+
+if (tempo > 100) {
+    play C4 quarter;
+    play E4 quarter;
+} else {
+    play G4 quarter;
+}
+```
+
+**Divisão** 
+```plaintext
+set tempo 220/2;
+set instrument "flute";
+
+if (tempo > 100) {
+    play C4 quarter;
+    play E4 quarter;
+} else {
+    play G4 quarter;
+}
+```
+
 
 ---
 
-### **Como Compilar e Executar**
-1. **Pré-requisitos**:
-   - Flex e Bison instalados no sistema.
-   - Compilador C ou C++ (como GCC).
-   - Biblioteca MIDI (opcional para exportação).
+### **Passo a Passo do Projeto**
+1. **Tratamento Léxico e Sintático**:
+   - O tratamento léxico e sintático é realizado pelos arquivos `lexer.l` e `parser.y`, que utilizam Flex e Bison, respectivamente.
+   - Esses arquivos, junto com outros componentes do projeto, são compilados com o `Makefile`:
 
-2. **Passos para Compilar**:
-   - Clone o repositório:
-     ```bash
-     git clone <link-do-repositorio>
-     cd Melodify
-     ```
-   - Gere o analisador:
-     ```bash
-     flex lexer.l
-     bison -d parser.y
-     gcc -o melodify lex.yy.c parser.tab.c -lm
-     ```
+2. **Como Compilar o Projeto**:
+    - Para compilar o executável melodify, basta rodar:
+    ```bash
+    make
+    ```
+    - Quando necessário, limpe os arquivos gerados com:
+    ```bash
+    make clean
+    ```
 
-3. **Executar um Programa**:
-   - Escreva um arquivo de código `program.melody` e execute:
+3. **Executar um Código da Linguagem**:
+   - Escreva um arquivo contendo código na linguagem `(exemplo: program.melody)` e execute:
      ```bash
      ./melodify program.melody
      ```
+     - O comando acima irá gerar uma `AST` (Abstract Syntax Tree) no arquivo `ast.yaml`.
 
-4. **Gerar Arquivo MIDI**:
-   - O arquivo MIDI será salvo como `output.midi` na mesma pasta.
+4. **Tratamento Semântico e Geração de Código**:
+    - Após a `AST` ser gerada, o arquivo `main.py` irá processá-la utilizando os arquivos `parser.py` e `nodes.py`.
+
+    - Esse processamento realiza o **tratamento semântico** e chama as funções `generate_code` dos nós da `AST` para criar o código de JVM responsável por gerar o arquivo MIDI, `output.mid`.
+
+5. **Testar o Arquivo MIDI Gerado**:
+    - Para tocar o arquivo MIDI gerado (`output.mid`), utilize o script `play_midi.py`:
+    ```bash
+    python3 play_midi.py
+    ```
+    - O script inicializa o mixer do Pygame, carrega o arquivo MIDI e o executa.
+
+6 **Resumo do Fluxo**:
+
+    - Escreva o código na linguagem em um arquivo .melody.
+
+    - Compile e execute o código com melodify para gerar a AST (ast.yaml).
+
+    - Rode o main.py para processar a AST, gerar o código em Java e produzir o arquivo MIDI (output.mid).
+
+    - Teste o arquivo MIDI com o script play_midi.py.
+
+Essa sequência garante a geração correta do arquivo MIDI e sua execução.
 
 ---
 

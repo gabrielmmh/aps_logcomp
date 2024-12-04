@@ -1,0 +1,66 @@
+type: 0
+left:
+  type: 1
+  left:
+    type: 24
+    left:
+      type: 18
+      value: 80
+  next:
+    type: 1
+    left:
+      type: 25
+      left:
+        type: 19
+        value: "piano"
+    next:
+      type: 1
+      left:
+        type: 26
+        left:
+          type: 18
+          value: 50
+      next:
+        type: 1
+        left:
+          type: 27
+          left:
+            type: 20
+            value: C4
+          right:
+            type: 22
+            value: quarter
+        next:
+          type: 1
+          left:
+            type: 26
+            left:
+              type: 18
+              value: 75
+          next:
+            type: 1
+            left:
+              type: 27
+              left:
+                type: 20
+                value: D4
+              right:
+                type: 22
+                value: half
+            next:
+              type: 1
+              left:
+                type: 26
+                left:
+                  type: 18
+                  value: 100
+              next:
+                type: 1
+                left:
+                  type: 27
+                  left:
+                    type: 20
+                    value: E4
+                  right:
+                    type: 22
+                    value: whole

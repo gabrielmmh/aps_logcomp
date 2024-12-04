@@ -1,5 +1,5 @@
-set tempo 100;
-set instrument "drums";
+set tempo 95;
+set instrument "organ";
 
 if (tempo > 90) {
     play C4 quarter;

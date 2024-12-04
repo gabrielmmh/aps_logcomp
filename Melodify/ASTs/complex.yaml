@@ -1,0 +1,164 @@
+type: 0
+left:
+  type: 1
+  left:
+    type: 24
+    left:
+      type: 18
+      value: 140
+  next:
+    type: 1
+    left:
+      type: 25
+      left:
+        type: 19
+        value: "organ"
+    next:
+      type: 1
+      left:
+        type: 26
+        left:
+          type: 18
+          value: 70
+      next:
+        type: 1
+        left:
+          type: 8
+          left:
+            type: 17
+            value: playMelody
+          right:
+            type: 1
+            left:
+              type: 7
+              left:
+                type: 18
+                value: 2
+              right:
+                type: 1
+                left:
+                  type: 27
+                  left:
+                    type: 20
+                    value: C4
+                  right:
+                    type: 22
+                    value: eighth
+                next:
+                  type: 1
+                  left:
+                    type: 27
+                    left:
+                      type: 20
+                      value: D4
+                    right:
+                      type: 22
+                      value: eighth
+                  next:
+                    type: 1
+                    left:
+                      type: 27
+                      left:
+                        type: 20
+                        value: E4
+                      right:
+                        type: 22
+                        value: quarter
+        next:
+          type: 1
+          left:
+            type: 8
+            left:
+              type: 17
+              value: playBass
+            right:
+              type: 1
+              left:
+                type: 27
+                left:
+                  type: 20
+                  value: C2
+                right:
+                  type: 22
+                  value: half
+              next:
+                type: 1
+                left:
+                  type: 27
+                  left:
+                    type: 20
+                    value: G2
+                  right:
+                    type: 22
+                    value: half
+          next:
+            type: 1
+            left:
+              type: 6
+              left:
+                type: 16
+                operator: '>'
+                left:
+                  type: 17
+                  value: tempo
+                right:
+                  type: 18
+                  value: 120
+              if_block:
+                type: 1
+                left:
+                  type: 9
+                  left:
+                    type: 17
+                    value: playMelody
+              else_block:
+                type: 1
+                left:
+                  type: 9
+                  left:
+                    type: 17
+                    value: playBass
+            next:
+              type: 1
+              left:
+                type: 26
+                left:
+                  type: 18
+                  value: 50
+              next:
+                type: 1
+                left:
+                  type: 7
+                  left:
+                    type: 18
+                    value: 3
+                  right:
+                    type: 1
+                    left:
+                      type: 28
+                      left:
+                        type: 21
+                        value: C_major
+                      right:
+                        type: 22
+                        value: quarter
+                    next:
+                      type: 1
+                      left:
+                        type: 28
+                        left:
+                          type: 21
+                          value: G_major
+                        right:
+                          type: 22
+                          value: quarter
+                next:
+                  type: 1
+                  left:
+                    type: 28
+                    left:
+                      type: 21
+                      value: C_major
+                    right:
+                      type: 22
+                      value: quarter

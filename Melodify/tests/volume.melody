@@ -1,4 +1,4 @@
-set tempo 100;
+set tempo 80;
 set instrument "piano";
 
 set volume 50;
@@ -7,5 +7,5 @@ play C4 quarter;
 set volume 75;
 play D4 half;
 
-set volume 100;
+set volume 120;
 play E4 whole;

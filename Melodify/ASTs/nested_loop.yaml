@@ -1,0 +1,69 @@
+type: 0
+left:
+  type: 1
+  left:
+    type: 24
+    left:
+      type: 18
+      value: 120
+  next:
+    type: 1
+    left:
+      type: 25
+      left:
+        type: 19
+        value: "flute"
+    next:
+      type: 1
+      left:
+        type: 7
+        left:
+          type: 18
+          value: 2
+        right:
+          type: 1
+          left:
+            type: 27
+            left:
+              type: 20
+              value: C4
+            right:
+              type: 22
+              value: quarter
+          next:
+            type: 1
+            left:
+              type: 7
+              left:
+                type: 18
+                value: 3
+              right:
+                type: 1
+                left:
+                  type: 27
+                  left:
+                    type: 20
+                    value: E4
+                  right:
+                    type: 22
+                    value: eighth
+                next:
+                  type: 1
+                  left:
+                    type: 27
+                    left:
+                      type: 20
+                      value: G4
+                    right:
+                      type: 22
+                      value: eighth
+            next:
+              type: 1
+              left:
+                type: 27
+                left:
+                  type: 20
+                  value: F4
+                right:
+                  type: 22
+                  value: half

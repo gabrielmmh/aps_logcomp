@@ -1,0 +1,31 @@
+set tempo 120;
+set instrument "piano";
+
+play G4 eighth;
+play G4 eighth;
+play A4 quarter;
+play G4 quarter;
+play C5 quarter;
+play B4 half;
+
+play G4 eighth;
+play G4 eighth;
+play A4 quarter;
+play G4 quarter;
+play D5 quarter;
+play C5 half;
+
+play G4 eighth;
+play G4 eighth;
+play G5 quarter;
+play E5 quarter;
+play C5 quarter;
+play B4 quarter;
+play A4 quarter;
+
+play F5 eighth;
+play F5 eighth;
+play E5 quarter;
+play C5 quarter;
+play D5 quarter;
+play C5 half;

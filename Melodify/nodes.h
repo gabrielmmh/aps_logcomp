@@ -35,22 +35,25 @@ typedef enum
     // Adicione outros tipos conforme necessário
 } NodeType;
 
+typedef struct Value {
+    int num;     // Para valores numéricos
+    char *str;   // Para strings
+    char op;     // Para operadores
+} Value;
+
 typedef struct Node
 {
     NodeType type;
     struct Node *left;
     struct Node *right;
     struct Node *next; // Para listas
-    union
-    {
-        int num;
-        char *str;
-        char op;
-    } value;
+    Value value;
 } Node;
 
 // Funções para criar nós
 Node *create_node(NodeType type, Node *left, Node *right);
 Node *create_leaf_node(NodeType type, int num, char *str, char op);
 
+// Função para serializar a AST
+void serialize_ast_to_file(Node *root, const char *filename);
 #endif

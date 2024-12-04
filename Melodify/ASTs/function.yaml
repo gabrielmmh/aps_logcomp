@@ -1,0 +1,66 @@
+type: 0
+left:
+  type: 1
+  left:
+    type: 24
+    left:
+      type: 18
+      value: 120
+  next:
+    type: 1
+    left:
+      type: 25
+      left:
+        type: 19
+        value: "guitar"
+    next:
+      type: 1
+      left:
+        type: 8
+        left:
+          type: 17
+          value: playChord
+        right:
+          type: 1
+          left:
+            type: 28
+            left:
+              type: 21
+              value: C_major
+            right:
+              type: 22
+              value: quarter
+          next:
+            type: 1
+            left:
+              type: 28
+              left:
+                type: 21
+                value: E_minor
+              right:
+                type: 22
+                value: quarter
+            next:
+              type: 1
+              left:
+                type: 28
+                left:
+                  type: 21
+                  value: G_major
+                right:
+                  type: 22
+                  value: half
+      next:
+        type: 1
+        left:
+          type: 9
+          left:
+            type: 17
+            value: playChord
+        next:
+          type: 1
+          left:
+            type: 9
+            left:
+              type: 17
+              value: playChord

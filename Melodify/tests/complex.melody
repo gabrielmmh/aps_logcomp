@@ -27,3 +27,5 @@ repeat 3 {
     play chord C_major quarter;
     play chord G_major quarter;
 }
+
+play chord C_major quarter;
